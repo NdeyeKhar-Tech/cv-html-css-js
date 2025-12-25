@@ -1,0 +1,80 @@
+
+  /* Essayer de rendre le site responsive avec @media pour mobile.*/ 
+/* @media (max-width:600px){ */
+    /* .profile-image{ */
+        /* width: 80px; */
+        /* height: 80px; */
+    /* } */
+/* } */
+.profile-image{
+    width: 300px;
+    height: 300px;
+}
+/* Reset basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    /*(Sans ça, ils seraient côte à côte)*/
+    flex-direction:column;
+    /*Active Flexbox sur le header Tous ses enfants (img, h1, p) deviennent flex-items*/
+     display: flex; 
+     /* Centre les éléments horizontalement */
+    align-items: center;
+    /*Ajouter un espace entre la photo,le nom et la description*/
+    gap: 10px;
+    /*Couleur de fond du header*/ 
+    background-color: aqua;
+}
+#skills ul{
+    /* Les <li> deviennent des éléments flex et s'alignent horizontalement */
+    display: flex;
+    /* Autorise le retour à la ligne (responsive) */
+    flex-wrap: wrap;
+    /* Espace propre entre chaque compétence */
+    gap: 10px;
+}
+ 
+#skills ul li{
+    /* Fond de couleur aux compétences */
+    background-color: blueviolet;
+    /* 5px haut/bas 10px gauche/droite */
+    padding: 5px 10px;
+    /* Coins arrondis */
+    border-radius: 10px;
+}
+header h1 {
+    color: #1f3c50; /* ton bleu foncé */
+}
+
+header p {
+    color: #f87b3d; /* ton orange */
+}
+
+/* Sections */
+section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
