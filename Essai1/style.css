@@ -1,11 +1,18 @@
 
   /* Essayer de rendre le site responsive avec @media pour mobile.*/ 
-/* @media (max-width:600px){ */
-    /* .profile-image{ */
-        /* width: 80px; */
-        /* height: 80px; */
-    /* } */
-/* } */
+ @media (max-width:600px){ 
+     .profile-image{ 
+         width: 80px; 
+        height: 80px; 
+     } 
+ } 
+ /* Sur téléphone, 2 colonnes c’est mauvais */
+@media (max-width:600px){
+    body{
+        grid-template-columns: 1fr;
+    }
+}
+
 .profile-image{
     width: 300px;
     height: 300px;
@@ -23,6 +30,11 @@ body {
     line-height: 1.6;
     padding: 20px;
     background-color: #f4f4f4;
+    display: grid;/*Active CSS Grid sur le body
+    Les sections deviennent des éléments de la grille*/
+    grid-template-columns: 1fr 1fr;/*Crée 2 colonnes égales 
+    1fr = 1 fraction de l’espace disponible*/
+    gap: 20px;/*espace entre les sections*/
 }
 
 /* Header */
